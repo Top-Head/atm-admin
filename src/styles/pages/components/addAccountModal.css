@@ -1,0 +1,103 @@
+@import url("../../global.css");
+
+.modal-addaccount {
+  position: fixed;
+  background-color: #1e1e1e9e;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.modal-addaccount.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-addaccount .add-account {
+  width: 0px;
+  background-color: var(--white);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 32px;
+  border-radius: 8px 0px 0px 8px;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.modal-addaccount.show .add-account {
+  width: 464px;
+}
+.modal-addaccount .add-account .desciption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.contentProgressiveBar {
+  width: 100%;
+  background: #ebebeb;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+.progressiveBar {
+  width: 0%;
+  height: 2px;
+  padding: 6px;
+  transition: 0.4s;
+  border-radius: 12px;
+  background: #8bce28;
+}
+.selects {
+  margin-bottom: 12px;
+}
+.input {
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.inputs label p {
+  font-weight: 700;
+}
+.remove::-webkit-inner-spin-button,
+.remove::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+.remove {
+  -moz-appearance: textfield;
+}
+.selects select {
+  padding: 12px;
+  background-color: var(--white);
+  border: 1px solid var(--gray_border);
+  border-radius: 6px;
+}
+.selects div p {
+  font-weight: 700;
+}
+.selects .course-u {
+  width: 72%;
+}
+.selects .class-u {
+  width: 26%;
+}
+.selects .course {
+  margin-top: 8px;
+  width: 100%;
+}
+.selects .class {
+  margin-top: 8px;
+  width: 100%;
+}
+.modal-addaccount .add-account button {
+  margin-top: 16px;
+  font-weight: 700;
+}

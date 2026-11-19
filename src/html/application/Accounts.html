@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/pages/application/Accounts.css" />
+    <link
+      rel="shortcut icon"
+      href="../../styles/assets/logo.svg"
+      type="image/x-icon"
+    />
+    <script defer type="module" src="../../Javascript/index.js"></script>
+
+    <script
+      defer
+      type="module"
+      src="../../Javascript/pages/application/Accounts.js"
+    ></script>
+    <script defer type="module" src="../../../main.js"></script>
+    <title>Accounts</title>
+  </head>
+  <body x-data="studentTableConfiguration">
+    <header id="header-menu"></header>
+    <div class="container">
+      <div class="documents-control">
+        <div class="flex-bt">
+          <h2 class="bold">Controle de Contas</h2>
+          <div class="btn-box flex">
+            <a href="#" class="add openAddAccountModalbtn">
+              + Adicionar conta</a
+            >
+          </div>
+        </div>
+        <p class="text-att">Gerencie a conta dos seu estudantes</p>
+      </div>
+      <div class="content">
+        <div class="flex-bt searchON">
+          <p>Contas Registadas</p>
+          <div class="flex">
+            <div class="search">
+              <p>pesquisar</p>
+              <input
+                x-model="search"
+                type="text"
+                placeholder="Pesquisar Estudantes"
+              />
+            </div>
+
+            <div class="delete">
+              <p class="p">-</p>
+              <a href="#" class="delete" x-show="deleteActiveButton">
+                <i>
+                  <img
+                    src="../../styles/assets/icons/delete-01.svg"
+                    alt="delete"
+                /></i>
+                Delete Conta</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="table loading">
+          <table>
+            <thead>
+              <tr>
+                <th class="in-checkBox"><input type="checkbox" /></th>
+                <th>Estudante</th>
+                <th>Class</th>
+                <th>Curso</th>
+                <th>Contacto</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <template x-for="item in filteredItems" :key="item.ref">
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td class="transferencia">
+                    <p x-text="item.name"></p>
+                    <p class="p2" x-text="item.ref"></p>
+                  </td>
+                  <td class="t" style="width: 35rem" x-text="item.grade"></td>
+                  <td class="" style="width: 40rem" x-text="item.course"></td>
+                  <td class="t" x-text="item.number"></td>
+                  <td>
+                    <i x-on:click="showDetailStudant(item.ref)">
+                      <img
+                        src="../../styles/assets/icons/config.svg"
+                        alt="config"
+                      />
+                    </i>
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+          <div class="loadingDiv">
+            <img src="../../styles/assets/waiting.gif" alt="loading" />
+          </div>
+          <div class="showing flex-bt">
+            <div>
+              <p>
+                Showing <span x-text="itemsPerPage"></span> of
+                <span x-text="totalItems"></span> items
+              </p>
+            </div>
+            <div class="cont flex">
+              <p>
+                Rows per pages
+                <select name="n-page" id="n-page" x-model="itemsPerPage">
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </p>
+              <p>
+                Page <span x-text="currentPage"></span> of
+                <span x-text="totalPages"></span>
+              </p>
+              <div>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/<<<.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(-2)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/<<.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(-1)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/>.svg"
+                    alt="left"
+                    x-on:click="changeCurrentPage(1)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/>>.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(2)"
+                /></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

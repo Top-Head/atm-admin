@@ -1,0 +1,51 @@
+@import url(../../global.css);
+
+.error-modal {
+  background-color: var(--bacgrountd-modal);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.error-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-modal .error {
+  background-color: var(--white);
+  width: 440px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 40px 32px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.show > .error {
+  top: 50%;
+}
+
+.error img {
+  margin-bottom: 12px;
+}
+
+.error-modal .error button {
+  padding: 18px;
+  width: 100%;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  background-color: var(--red);
+  margin-top: 24px;
+}
+.error-modal .error h2 {
+  margin-bottom: 12px;
+}

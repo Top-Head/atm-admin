@@ -1,0 +1,69 @@
+@import url(../../global.css);
+.modal-activities-details {
+  position: fixed;
+  background-color: var(--bacgrountd-modal);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-activities-details.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-activities-details .activities-details {
+  width: 0px;
+  background-color: var(--white);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 32px;
+  border-radius: 8px 0px 0px 8px;
+  height: 100vh;
+  transition: 0.5s;
+}
+.show .activities-details {
+  width: 464px;
+}
+
+.modal-activities-details .flex {
+  gap: 6px;
+}
+.modal-activities-details .activities-details .on {
+  margin-bottom: 54px;
+}
+
+.modal-activities-details .config {
+  font-family: 12px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.modal-activities-details .delete {
+  background-color: var(--delete);
+  color: var(--red);
+}
+.modal-activities-details .getE {
+  color: var(--white);
+  background: var(--blacK);
+}
+.modal-activities-details .dataActivity {
+  margin-top: 8px;
+}
+.modal-activities-details .dataActivity .title {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.modal-activities-details .dataActivity .value {
+  font-size: 16px;
+}
+.modal-activities-details .activities-details .dataActivity .on {
+  margin-bottom: 42px;
+}

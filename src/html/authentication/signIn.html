@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../styles/assets/logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/pages/authenticactionStyles/signIn.css"
+    />
+    <script defer type="module" src="../../Javascript/index.js"></script>
+    <script
+      defer
+      type="module"
+      src="../../Javascript/pages/authentication/signIn.js"
+    ></script>
+    <title>Sign In</title>
+  </head>
+  <div style="display: none" id="header-menu"></div>
+  <body>
+    <div class="container">
+      <div class="side-one">
+        <img src="../../styles/assets/logo.svg" alt="logo" class="logoImg" />
+        <form class="form" id="signIn-form">
+          <h2 class="bold">Entrar</h2>
+          <label for="email">
+            <p>Email</p>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </label>
+          <label for="password">
+            <p>Password</p>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </label>
+          <div class="flex-bt">
+            <p></p>
+            <a href="#">Esqueceu da Password</a>
+          </div>
+          <button class="btn-black-100" type="submit">Iniciar sessáo</button>
+        </form>
+      </div>
+      <div class="side-two">
+        <div class="text">
+          <p>Painel de administração</p>
+          <h1 class="black">Raizes da Felicidade</h1>
+          <p class="p2">
+            Diga adeus às filas e tenha acesso instantâneo às suas provas e
+            notas!
+          </p>
+        </div>
+        <div>
+          <img src="../../styles/assets/dashboard.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import url(../../global.css);
+.edite-sheets-modal {
+  position: fixed;
+  background-color: var(--bacgrountd-modal);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+.edite-sheets-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.edite-sheets-modal .edite-sheets {
+  transform: translate(-50%, -50%) !important;
+  left: 50%;
+  top: 40%;
+  width: 464px;
+  background-color: var(--white);
+  position: absolute;
+  padding: 32px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.show > .edite-sheets {
+  top: 50%;
+}
+
+.edite-sheets-modal .qauntety {
+  margin: 32px 0px;
+}
+.edite-sheets-modal .qauntety h1 {
+  width: 70%;
+}
+.edite-sheets-modal .qauntety h1 input {
+  font-size: 30px;
+  font-weight: 900;
+  outline: none;
+  font-family: var(--font-bold);
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gray_border);
+}
+.remove::-webkit-inner-spin-button,
+.remove::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+.remove {
+  -moz-appearance: textfield;
+}
+.edite-sheets-modal .qauntety button {
+  border: none;
+  background-color: var(--white);
+  border: none;
+}

@@ -1,0 +1,80 @@
+@import url("../../global.css");
+
+.modal-account-details {
+  position: fixed;
+  background-color: var(--bacgrountd-modal);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.modal-account-details.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-account-details .account {
+  background-color: var(--white);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 32px;
+  border-radius: 8px 0px 0px 8px;
+  height: 130vh;
+  width: 0px;
+  transition: width 0.5s;
+}
+
+.modal-account-details.show .account {
+  width: 464px;
+}
+
+.modal-account-details .account .desciption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.selects {
+  margin-bottom: 12px;
+}
+.input {
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.inputs label p {
+  font-weight: 700;
+}
+.remove::-webkit-inner-spin-button,
+.remove::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+.remove {
+  -moz-appearance: textfield;
+}
+.btn {
+  margin-top: 25px;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 900;
+  font-size: 14px;
+  background-color: var(--blacK);
+  color: var(--white);
+  border-radius: 6px;
+}
+.modal-account-details .btn.logout {
+  background-color: var(--red);
+  margin-top: 6px;
+  color: var(--white);
+}

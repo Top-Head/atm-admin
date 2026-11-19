@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../styles/pages/application/Documents.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../styles/assets/logo.svg"
+      type="image/x-icon"
+    />
+    <script defer type="module" src="../../Javascript/index.js"></script>
+    <script
+      defer
+      type="module"
+      src="../../Javascript/pages/application/Documents.js"
+    ></script>
+    <script type="module" src="../../../main.js"></script>
+    <title>Documents</title>
+  </head>
+  <body>
+    <header id="header-menu"></header>
+    <div class="container" x-data="TableConfiguration">
+      <div class="documents-control">
+        <div class="flex-bt">
+          <h2 class="bold">Controle de documentos</h2>
+          <div class="btn-box flex">
+            <a href="#" class="add add-sheets-button"> + Adicionar folhas</a>
+            <a href="#" class="edite edite-sheets-button">
+              <i>
+                <img src="../../styles/assets/icons/edit-02.svg" alt="edit"
+              /></i>
+              Editar folhas</a
+            >
+          </div>
+        </div>
+        <p class="text-att">Acompanhe o histórico dos documentos registrados</p>
+        <div class="flex-bt bt2">
+          <div class="flex btn-box">
+            <a class="bn cheked" href="#">
+              <i class="#">
+                <img src="../../styles/assets/icons/license.svg" alt="assets" />
+              </i>
+              Folha de prova
+            </a>
+            <a href="#" class="bn">
+              <i class="#">
+                <img src="../../styles/assets/icons/nots.svg" alt="nots" />
+              </i>
+              Boletin de nota
+            </a>
+          </div>
+          <div class="delete">
+            <a
+              href="#"
+              class="delete"
+              x-show="deleteActiveButton"
+              x-transition.duration.500ms
+              x-on:click="deleteSelectedActivity()"
+            >
+              <i>
+                <img src="../../styles/assets/icons/delete-01.svg" alt="delete"
+              /></i>
+              Delete extrato</a
+            >
+          </div>
+        </div>
+        <div class="table"></div>
+      </div>
+    </div>
+  </body>
+</html>

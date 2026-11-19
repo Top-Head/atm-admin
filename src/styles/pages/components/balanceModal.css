@@ -1,0 +1,54 @@
+@import url(../../global.css);
+
+.balance {
+  position: fixed;
+  background-color: var(--bacgrountd-modal);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll !important;
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.balance.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.balance .add-balance {
+  transform: translate(-50%, -50%) !important;
+  left: 50%;
+  top: 40%;
+  width: 464px;
+  background-color: var(--white);
+  position: absolute;
+  padding: 32px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.balance.show .add-balance {
+  top: 50%;
+}
+
+.balanceNumberValue {
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 31px;
+}
+.balanceNumberValue input {
+  font-size: 30px;
+  font-weight: 900;
+  outline: none;
+  font-family: var(--font-bold);
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gray_border);
+}
+.balance .quantety p {
+  margin-top: 12px;
+}

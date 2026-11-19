@@ -1,0 +1,70 @@
+@import url(../../global.css);
+.content {
+  margin-top: 3px;
+  padding: 13px 216px;
+}
+.documents-control {
+  padding: 0px 216px;
+  margin-top: 72px;
+}
+.documents-control .btn-box {
+  gap: 8px;
+}
+.documents-control .btn-box a {
+  font-family: 12px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.documents-control .btn-box .add {
+  color: var(--white);
+  background: var(--blue);
+}
+.documents-control .btn-box .cheked {
+  color: var(--white);
+  background: var(--blacK);
+}
+.documents-control .btn-box .edite {
+  color: var(--white);
+  background: var(--blacK);
+}
+
+.documents-control .delete a {
+  font-family: 12px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  color: var(--red);
+  background: var(--delete);
+}
+.bt2 {
+  margin: 42px 0px;
+}
+.text-att {
+  margin-top: 9px;
+}
+.searchON {
+  margin-top: 31px;
+}
+.searchON .flex {
+  gap: 32px;
+}
+
+.delete .delete {
+  font-family: 12px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  color: var(--red);
+  background: var(--delete);
+}
+.delete .p {
+  color: var(--white);
+}
+
+.config.add {
+  background-color: var(--blue);
+  color: var(--white);
+}

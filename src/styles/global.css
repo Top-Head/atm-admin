@@ -1,0 +1,113 @@
+@import url("./fonts/ImportFonts.css");
+@import url("./pages/components/desconnetedModal.css");
+@import url("./pages/components/errorModal.css");
+@import url("./pages/components/addSheetsModal.css");
+@import url("./pages/components/loadingModal.css");
+@import url("./pages/components/accountsDetailsModal.css");
+@import url("./pages/components/menu.css");
+@import url("./pages/components/buttons.css");
+@import url("./pages/components/Inputs.css");
+@import url("./pages/components/operationSucessModal.css");
+@import url("./pages/components/editeSheetsModal.css");
+@import url("./pages/components/addAccountModal.css");
+@import url("./pages/components/activitiesTable.css");
+@import url("./pages/components/studantDetailModal.css");
+@import url("./pages/components/balanceModal.css");
+@import url("./pages/components/activitiesDetailModal.css");
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "font-regular";
+}
+button {
+  font-weight: bolder;
+  cursor: pointer;
+}
+p,
+span {
+  font-size: 14px;
+  color: var(--zinc-200);
+}
+
+a {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--gray-text);
+  display: inline-block;
+}
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+  color: var(--blacK);
+}
+.text-gray-100 {
+  color: var(--gray-100);
+}
+.bold {
+  font-family: "font-bold";
+}
+.black {
+  font-family: "font-black";
+}
+.ligth {
+  font-family: "font-ligth";
+}
+.flex-bt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+i {
+  cursor: pointer;
+}
+
+.user {
+  cursor: pointer;
+}
+
+.search {
+  width: 298px;
+}
+.search input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 4px;
+  border: 1px solid var(--gray_border);
+}
+.search p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.52px;
+  text-align: left;
+}
+.avatar {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 50px;
+  color: var(--gray-text);
+}
+:root {
+  --bacgrountd-modal: #3830309e;
+  --white: #ffff;
+  --gray_border: #e0e0e0;
+  --blacK: #1c1c1c;
+  --gray-text: #656666;
+  --gray-100: #707070;
+  --blue: #293e93;
+  --zinc-200: #27272a;
+  --red: #ee1c1c;
+  --delete: #ee1c1c40;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../styles/pages/application/Dashboard.css"
+    />
+    <script type="module" src="../../Javascript/index.js"></script>
+    <script
+      defer
+      type="module"
+      src="../../Javascript/pages/application/Dashboard.js"
+    ></script>
+
+    <link
+      rel="shortcut icon"
+      href="../../styles/assets/logo.svg"
+      type="image/x-icon"
+    />
+
+    <script type="module" src="../../../main.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header id="header-menu"></header>
+    <div class="container" x-data="TableConfiguration">
+      <div class="content">
+        <div class="estatistics flex">
+          <h2 class="black">Estatisticas</h2>
+          <a href="#" class="add add-sheets-button">+ Adciomar folha </a>
+        </div>
+        <p>Resumo das actividades realizadas</p>
+        <div class="dashboard">
+          <div class="total accounts">
+            <div class="text">
+              <p>Total de contas</p>
+              <h1 class="totalAccounts">0</h1>
+              <p class="card-description">Estuadtes Registados</p>
+            </div>
+            <i>
+              <img
+                src="../../styles/assets/icons/Summary card icon.svg"
+                alt=""
+              />
+            </i>
+          </div>
+          <div class="total sheets">
+            <div class="text">
+              <p>Total de Folhas</p>
+              <h1 class="totalSheets">0</h1>
+              <p class="card-description">Folha de prova desponives</p>
+            </div>
+            <i>
+              <img
+                src="../../styles/assets/icons/Summary card icon.svg"
+                alt=""
+              />
+            </i>
+          </div>
+        </div>
+        <div class="flex-bt searchON">
+          <p>Actividades Recentes</p>
+
+          <div class="flex">
+            <div class="search">
+              <p>pesquisar</p>
+              <input type="text" placeholder="pesquisa por estudantes aqui  " />
+            </div>
+            <div class="delete-btn-box">
+              <a
+                href="#"
+                class="delete"
+                x-show="deleteActiveButton"
+                x-transition.duration.500ms
+                x-on:click="deleteSelectedActivity()"
+              >
+                <i>
+                  <img
+                    src="../../styles/assets/icons/delete-01.svg"
+                    alt="delete"
+                /></i>
+                Delete actividade</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="table"></div>
+      </div>
+    </div>
+  </body>
+</html>

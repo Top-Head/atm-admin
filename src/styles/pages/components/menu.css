@@ -1,0 +1,25 @@
+.menu {
+  border-bottom: 1px solid var(--gray_border);
+  padding: 14px 112px;
+  font-size: 14lx;
+}
+.menu .logo {
+  gap: 32px;
+}
+.menu .link {
+  gap: 2px;
+}
+.menu .link a {
+  padding: 6px 10px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.menu .link .atv {
+  color: var(--white);
+  font-weight: 700;
+  background: var(--blue);
+}
+
+.menu .user {
+  gap: 16px;
+}

@@ -1,0 +1,41 @@
+@import url("../../global.css");
+
+.loading-modal {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  transition: 0.5s;
+  background: var(--bacgrountd-modal);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.loading-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+.loading-modal .loading {
+  background-color: var(--white);
+  width: 440px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 52px 50px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.show > .loading {
+  top: 50%;
+}
+
+.loading-modal .loading img {
+  width: 180px;
+}
+.loading-modal .loading h2 {
+  margin-bottom: 12px;
+}

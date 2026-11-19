@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../styles/pages/application/Activities.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../styles/assets/logo.svg"
+      type="image/x-icon"
+    />
+    <script defer type="module" src="../../Javascript/index.js"></script>
+    <script
+      defer
+      type="module"
+      src="../../Javascript/pages/application/Activities.js"
+    ></script>
+    <script type="module" src="../../../main.js"></script>
+
+    <title>Activities</title>
+  </head>
+  <body x-data="TableConfiguration">
+    <header id="header-menu"></header>
+    <div class="container">
+      <div class="documents-control">
+        <div class="flex-bt">
+          <h2 class="bold">Actividades</h2>
+        </div>
+        <p class="text-att">
+          Confira o histórico das actividades realizadas no sistema
+        </p>
+        <div class="flex-bt bt2">
+          <div class="flex btn-box">
+            <a
+              class="bn active"
+              href="#"
+              @click.prevent="activeLink = 'link1', showAll()"
+              :class="{ 'active': activeLink === 'link1' }"
+            >
+              <i class="fa-regular fa-note-sticky"></i>
+              Todas
+            </a>
+            <a
+              href="#"
+              class="bn"
+              @click.prevent="activeLink = 'link2' , filterActivities('Transferencia')"
+              :class="{ 'active': activeLink === 'link2' }"
+            >
+              <i class="fa-regular fa-note-sticky"></i>
+              Transferencia
+            </a>
+            <a
+              href="#"
+              @click.prevent="activeLink = 'link3', filterActivities('Depositos')"
+              :class="{ 'active': activeLink === 'link3' }"
+              class="bn"
+            >
+              <i class="fa-regular fa-note-sticky"></i>
+              Depositos
+            </a>
+            <a
+              href="#"
+              @click.prevent="activeLink = 'link4', filterActivities('Folhas')"
+              :class="{ 'active': activeLink === 'link4' }"
+              class="bn"
+            >
+              <i class="fa-regular fa-note-sticky"></i>
+              Solicitação de folhas
+            </a>
+          </div>
+          <div class="delete">
+            <a
+              href="#"
+              class="delete"
+              x-show="deleteActiveButton"
+              x-transition.duration.500ms
+              x-on:click="deleteSelectedActivity()"
+            >
+              <i>
+                <img src="../../styles/assets/icons/delete-01.svg" alt="delete"
+              /></i>
+              Delete actividade</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="flex-bt searchON">
+          <p>Actividades Recentes</p>
+          <div class="search">
+            <p>pesquisar</p>
+            <input
+              x-model="search"
+              type="text"
+              placeholder="pesquisa por estudantes aqui  "
+              name="search"
+              id="search"
+            />
+          </div>
+        </div>
+
+        <div class="table loading">
+          <table>
+            <thead>
+              <tr>
+                <th class="in-checkBox"><input type="checkbox" /></th>
+                <th>Actividades</th>
+                <th>Horário</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <template x-for="item in filteredItems" :key="item.id">
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      x-on:change="selectActivities(item.id)"
+                    />
+                  </td>
+                  <td class="transferencia">
+                    <p x-text="item.type_operation"></p>
+                    <p class="p2" x-text="item.message_activitie">
+                      António Gabriel realizou uma transferência de 2500 para
+                      Paulo Sanguli...
+                    </p>
+                  </td>
+                  <td class="time" x-text="item.date_activitie"></td>
+                  <td>
+                    <i x-on:click="showDetailActivities(item.id)">
+                      <img
+                        src="../../styles/assets/icons/config.svg"
+                        alt="config"
+                      />
+                    </i>
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+          <div class="loadingDiv">
+            <img src="../../styles/assets/waiting.gif" alt="loading" />
+          </div>
+          <div class="showing flex-bt">
+            <div>
+              <p>
+                Showing <span x-text="itemsPerPage"></span> of
+                <span x-text="totalItems"></span> items
+              </p>
+            </div>
+            <div class="cont flex">
+              <p>
+                Rows per pages
+                <select name="n-page" id="n-page" x-model="itemsPerPage">
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </p>
+              <p>
+                Page <span x-text="currentPage"></span> of
+                <span x-text="totalPages"></span>
+              </p>
+              <div>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/<<<.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(-2)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/<<.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(-1)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/>.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(1)"
+                /></i>
+                <i
+                  ><img
+                    src="../../styles/assets/icons/>>.svg"
+                    alt="left"
+                    x-on:click=" changeCurrentPage(2)"
+                /></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

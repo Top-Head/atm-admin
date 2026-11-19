@@ -1,0 +1,87 @@
+@import url(../../global.css);
+.modal-student-details {
+  position: fixed;
+  background-color: var(--bacgrountd-modal);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.modal-student-details.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-student-details .student-details {
+  width: 0px;
+  background-color: var(--white);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 32px;
+  border-radius: 8px 0px 0px 8px;
+  height: 130vh;
+  transition: 0.5s;
+}
+
+.modal-student-details.show .student-details {
+  width: 464px;
+}
+
+.modal-student-details .flex {
+  gap: 6px;
+}
+
+.modal-student-details .student-details .links {
+  margin-bottom: 42px;
+}
+.modal-student-details .student-details .on {
+  margin-bottom: 54px;
+}
+
+.modal-student-details .config {
+  font-family: 12px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.modal-student-details .delete {
+  background-color: var(--delete);
+  color: var(--red);
+}
+.modal-student-details.add {
+  color: var(--white);
+  background: var(--blue);
+}
+.modal-student-details .getE {
+  color: var(--white);
+  background: var(--blacK);
+}
+.modal-student-details .dataActivity {
+  margin-top: 8px;
+}
+.modal-student-details .dataActivity .title {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.modal-student-details .dataActivity .value {
+  font-size: 16px;
+}
+.modal-student-details .student-details .dataActivity .on {
+  margin-bottom: 42px;
+}
+.flex-bt.on div:last-child {
+  text-align: right;
+}
+.modal-student-details .student-details button {
+  margin-top: 22px;
+  margin-bottom: 14px;
+}

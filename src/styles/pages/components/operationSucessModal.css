@@ -1,0 +1,56 @@
+@import url("../../global.css");
+.operation-sucess-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bacgrountd-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.operation-sucess-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+.operation-sucess-modal .sucess {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 32px 21px;
+  transition: 0.5s;
+}
+
+.show > .sucess {
+  top: 50%;
+}
+.operation-sucess-modal img {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+}
+.operation-sucess-modal .bold {
+  margin-bottom: 12px;
+  margin-top: 22px;
+}
+
+.operation-sucess-modal p {
+  width: 333px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.58px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 42px;
+}

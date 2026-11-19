@@ -1,0 +1,92 @@
+@import url(../../global.css);
+
+table {
+  width: 100%;
+  border-top: 2px solid var(--gray_border);
+  border-spacing: inherit;
+  margin-top: 32px;
+  transition: 0.3s;
+}
+table th,
+table td {
+  font-size: 12px;
+}
+table thead tr th,
+table tbody td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--gray_border);
+  color: var(--gray-text);
+}
+
+table tbody tr td p {
+  color: var(--gray-text);
+  font-size: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-align: left;
+}
+
+table tbody tr td .p2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 6px;
+  color: var(--gray-100);
+}
+table tbody tr .transferencia {
+  width: 510px;
+}
+
+table tbody tr .time {
+  width: 400px;
+}
+
+.showing {
+  padding: 12px;
+}
+.showing p,
+.showing span {
+  color: var(--gray-text);
+}
+.cont {
+  gap: 32px;
+}
+.table.loading .showing {
+  display: none;
+}
+.cont select {
+  padding: 6px 12px;
+  border: none;
+  background-color: var(--white);
+  border-radius: 6px;
+  border: 1px solid var(--gray_border);
+  color: var(--gray-text);
+}
+.loadingDiv {
+  display: none;
+  height: 10rem;
+  position: relative;
+}
+.loadingDiv img {
+  display: block;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table.loading .loadingDiv {
+  padding: 50px;
+  display: block;
+}
+
+.table.loading tbody {
+  display: none;
+}
+.table.loading {
+  border-radius: 8px;
+}

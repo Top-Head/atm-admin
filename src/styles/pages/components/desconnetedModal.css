@@ -1,0 +1,34 @@
+@import url(../../global.css);
+.deconnectedModaL {
+  position: fixed;
+  background-color: var(--white);
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  transition: 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.deconnectedModaL.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.deconnectedModaL .desconnected {
+  text-align: center;
+  transform: translate(-50%, -50%) !important;
+  left: 50%;
+  top: 50%;
+  width: 464px;
+  background-color: var(--white);
+  position: absolute;
+  padding: 32px;
+  border-radius: 6px;
+  transition: 0s;
+}
+
+.desconnected p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

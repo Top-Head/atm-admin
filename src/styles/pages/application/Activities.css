@@ -1,0 +1,7 @@
+@import url(../../global.css);
+@import url(./Documents.css);
+
+.active {
+  background: var(--blacK);
+  color: var(--white);
+}

@@ -1,0 +1,12 @@
+@import url("../../global.css");
+
+.btn-black-100 {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 900;
+  font-size: 14px;
+  background-color: var(--blacK);
+  color: var(--white);
+  border-radius: 6px;
+}

@@ -1,0 +1,57 @@
+@import url(../../global.css);
+
+.content {
+  padding: 72px 216px;
+}
+.estatistics {
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.estatistics a {
+  background: var(--blue);
+  color: var(--white);
+  font-family: 12px;
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+.dashboard {
+  margin: 32px 0px 42px 0px;
+  display: flex;
+  gap: 16px;
+}
+
+.dashboard .total {
+  display: flex;
+  justify-content: space-between;
+  width: 261px;
+  padding: 22px;
+  border-radius: 8px;
+  border: 1px solid var(--gray_border);
+}
+.dashboard .total .text h1 {
+  margin-top: 22px;
+  margin-bottom: 13px;
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: "font-semibold";
+  line-height: 38.73px;
+  text-align: left;
+}
+.dashboard .text .card-description {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  color: var(--gray-text);
+  text-align: left;
+}
+
+.flex {
+  align-items: end;
+  gap: 12px;
+}
+.delete-btn-box a {
+  padding: 8px;
+  border-radius: 50px;
+  background-color: var(--delete);
+  color: var(--red);
+}

@@ -1,0 +1,67 @@
+@import url(../../global.css);
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+.logoImg {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.form {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form h2 {
+  margin-bottom: 40px;
+}
+
+.form label p {
+  margin-bottom: 8px;
+}
+.form label input {
+  margin-bottom: 22px;
+}
+.form a {
+  font-weight: bolder;
+}
+
+.form button {
+  margin-top: 33px;
+}
+
+.side-one {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.side-two {
+  background: var(--blue);
+  padding-left: 72px;
+  width: 50%;
+  height: 100vh;
+}
+.side-two .text {
+  margin-top: 92px;
+  margin-bottom: 90px;
+}
+.side-two h1,
+.side-two p {
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.side-two .p2 {
+  font-family: "font-light";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+}
+.side-two div img {
+  width: 100%;
+}
